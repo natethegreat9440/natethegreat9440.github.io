@@ -1,0 +1,158 @@
+﻿
+html, body {
+    background-color: palegoldenrod;
+    margin: 0; /* Removes default margin */
+    margin-right: 0; /* Removes default margin */
+    width: 100%;
+    /*overflow-x: hidden; /* Prevents horizontal scroll bar */
+}
+
+    body :not(header):not(footer):not(.page-banner):not(.page-banner-disclaimer):not(a) {
+        /* Apply styles to all elements inside the body, except header and footer */
+        margin: 8px;
+        /*display: flex; /* Enables flexbox */
+    }
+
+header {
+    width: 100%; /* Makes sure the header takes up the full width */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    background-color: #ffcc33; /* Golden yellow */
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, 'Arial Narrow', sans-serif;
+    border-bottom: 5px solid #4c9141; /* Fern green border */
+    margin: 0 0 0.5rem 0; /* Adds space below the header */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex-direction: row;
+}
+    header a {
+        display: inline-block;
+        margin: 0; /* Remove extra space around the links */
+        padding: 0; /* Adjust padding for link size, if needed */
+        text-decoration: none; /* Removes underline from links */
+        margin: 10px; /* Adds space around the links */
+        font-size: 3em;
+        color: #4cbb17;
+        border: 5px solid #4cbb17;
+        border-radius: 15px; /* Rounded corners */
+        padding: 10px;
+        align-self: center; /* Centers the links vertically */
+        /*padding: 5px 7px 5px 7px; /* Adds space inside the border */
+    }
+
+    header nav {
+        display: flex; /* Makes sure links stay aligned */
+        padding-bottom: 0; /* Remove any extra space below */
+        margin-top: auto;
+        font-family: Tahoma, Verdana, sans-serif;
+    }
+
+    header img {
+        display: block; /* Ensures the image is treated as a block-level element */
+        margin: 0 auto; /* Centers the image horizontally within its container */
+    }
+
+.page-banner {
+    background-color: #c5e384;
+    width: 98%; 
+    border: 5px solid #4c9141; /* Fern green border */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin: 8px auto; /* Adds space around the banner */
+    /*margin-bottom: 0.5rem;*/
+    padding: 0px; /* Adds space inside the border */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    text-align: center; /* Optional: Centers the text */
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.page-banner-disclaimer {
+    background-color: #c5e384;
+    width: 77%; 
+    border: 3px solid #4c9141; /* Fern green border */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin: 12px auto; /* Adds space around the banner */
+    /*margin-bottom: 0.5rem;*/
+    padding: 0px; /* Adds space inside the border */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    text-align: center; /* Optional: Centers the text */
+    font-family: Tahoma, Verdana, sans-serif;
+    justify-content: center; /* Centers the content horizontally */
+    font-size: 0.7em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+main {
+    display: flex;
+    /*width: 100%; This seems to cause issues*/
+    align-items: flex-start; /* Ensures the image and article align at the top */
+    /*margin: 8px;/* Adds space around the main content */
+}
+
+    main img {
+        margin-right: 1rem; /* Adds some space between the image and the article 20px */
+        /*margin-top: 4rem; */
+        flex-shrink: 0; /* Prevents the image from shrinking */
+        max-width: 600px; /* Sets the max width of the image. Seems to work */
+        height: auto; /* Ensures the image keeps its aspect ratio */
+        border: 5px solid #4c9141; /* Fern green border */
+        border-radius: 15px; /* Rounded corners */
+    }
+
+article {
+    flex-grow: 1; /* Allows the article to take up remaining space */
+    background-color: #c5e384;
+    font-family: Arial, 'Arial Narrow', sans-serif;
+    border: 5px solid #4c9141; /* Fern green border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Optional: Adds some padding inside the article */
+}
+
+    article h2 {
+        text-align: center; /* Centers the text horizontally */
+    }
+
+footer {
+    width: 100%; /* Makes sure the header takes up the full width */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    background-color: #ffcc33; /* Golden yellow */
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, 'Arial Narrow', sans-serif;
+    color: #4cbb17;
+    border-top: 5px solid #4c9141; /* Fern green border */
+    margin: 0.5rem 0 0 0; /* Adds space above the footer */
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Space between center content and small text */
+    align-items: center; /* Centers the content vertically */
+    position: relative;
+    /*flex-direction: row;*/
+}
+    footer a {
+        display: inline-block;
+        margin: 0; /* Remove extra space around the links */
+        padding: 0; /* Adjust padding for link size, if needed */
+        margin: 10px; /* Adds space around the links */
+        font-size: 1em;
+        color: #4cbb17;
+        padding: 10px;
+        text-underline-offset: 5px;
+        /*padding: 5px 7px 5px 7px; /* Adds space inside the border */
+}
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Adjust the width of the content to avoid stretching */
+        flex-wrap: wrap; /* Allows content to wrap to the next line */
+    }
+
+    footer small {
+        position: absolute;
+        bottom: 2px;
+        right: 10px;
+        color: black;
+        margin: 0;
+    }

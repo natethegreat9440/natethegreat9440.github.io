@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact - Nathan Haley</title>
+    <link rel="stylesheet" href="NWH_styles.css" />
+
+    <!--<script> tage for .js file is right before </body>-->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Main.html">Bio</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Tools.html">Tools</a>
+        </nav>
+        <span>
+            <!--Use CSS to set logo size later-->
+            <img src="Logos\NWH_Logo_4.png" alt="NWH Logo" width="150" height="150" />
+        </span>
+    </header>
+
+    <section class="page-banner">
+
+        <h1>Contact Me!</h1>
+
+    </section>
+
+    <main>
+        <form id="selectionForm">
+            <select id="formSelector" onchange="showForm()">
+                <option value="">Select a Contact Form</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Employment Inquiry">Employment Inquiry</option>
+                <option value="Collaboration Inquiry">Collaboration Inquiry</option>
+                <option value="Website Feedback">Website Feedback</option>
+                <option value="Project Feedback">Project Feedback</option>
+            </select>
+        </form>
+
+        <!-- Divs for each form, initially hidden -->
+        <div id="General Inquiry" style="display:none">
+            <!--Add action and method for form once I have a database server for storing submissions-->
+            <form>
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="general_name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="general_email" name="email" required>
+                </div>
+                <div>
+                    <label for="general_message">Message:</label>
+                    <textarea id="general_message" name="general_message" placeholder="Enter your message here..." required></textarea>
+                    <input type="submit" value="Submit General Inquiry">
+                </div>
+
+            </form>
+        </div>
+
+        <div id="Employment Inquiry" style="display:none">
+            <!--Add action and method for form once I have a database server for storing submissions-->
+            <form>
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="employment_name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="employment_email" name="email" required>
+                </div>
+                <div>
+                    <label for="oppurtunity">Job Oppurtunity:</label>
+                    <input type="text" id="oppurtunity" name="oppurtunity" required>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div>
+                    <label for="employment_message">Message:</label>
+                    <textarea id="employment_message" name="employment_message" placeholder="Enter your message here..." required></textarea>
+                    <input type="submit" value="Submit Employment Inquiry">
+                </div>
+            </form>
+        </div>
+
+        <div id="Collaboration Inquiry" style="display:none">
+            <!--Add action and method for form once I have a database server for storing submissions-->
+            <form>
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="collab_name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="collab_email" name="email" required>
+                </div>
+                <div>
+                    <label>Who's Project?</label>
+                    <label for="myProject">
+                        <input type="radio" id="myProject" name="projectChoice" value="myProject" required>
+                        My Project
+                    </label>
+                    <label for="yourProject">
+                        <input type="radio" id="yourProject" name="projectChoice" value="yourProject">
+                        Your Project
+                    </label>
+                    <label for="projectName">Project Name:</label>
+                    <input type="text" id="projectName" name="projectName" required>
+                </div>
+                <div>
+                    <label for="collab_message">Message:</label>
+                    <textarea id="collab_message" name="collab_message" placeholder="Enter your message here..." required></textarea>
+                    <input type="submit" value="Submit Collaboration Inquiry">
+                </div>
+            </form>
+        </div>
+
+        <div id="Website Feedback" style="display:none">
+            <!--Add action and method for form once I have a database server for storing submissions-->
+            <form>
+                <div>
+                    <label for="name">Your Name (optional):</label>
+                    <input type="text" id="web_name" name="name" required>
+                    <label for="email">Email (optional):</label>
+                    <input type="email" id="web_email" name="email" required>
+                </div>
+                <div>
+                    <select id="feedbackSelector" required>
+                        <option value="">Select a Feedback Area</option>
+                        <option value="General">General Feedback</option>
+                        <option value="Bio">Bio Page</option>
+                        <option value="Projects">Projects Page</option>
+                        <option value="Resume">Resume Page</option>
+                        <option value="Tools">Tools for Engineers Page</option>
+                        <option value="Contact">Contact Page</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="web_feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+                    <input type="submit" value="Submit Website Feedback">
+                </div>
+            </form>
+        </div>
+
+        <div id="Project Feedback" style="display:none">
+            <!--Add action and method for form once I have a database server for storing submissions-->
+            <form>
+                <div>
+                    <label for="name">Your Name (optional):</label>
+                    <input type="text" id="project_name" name="name">
+                    <label for="email">Email (optional):</label>
+                    <input type="email" id="project_email" name="email">
+                </div>
+                <div>
+                    <select id="projectSelector" required>
+                        <option value="">Select a Project</option>
+                        <option value="AudioFile">AudioFile</option>
+                        <option value="CBPS">CBPS Pro</option>
+                        <option value="Static_Calc">Duct Static Calc Pro</option>
+                        <option value="Gym">Gym Workout App (tentative title)</option>
+                        <option value="MTG">MTG Deck Builder (tentative title)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="project_feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+                    <input type="submit" value="Submit Project Feedback">
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <a href="Main.html">Bio</a>
+            <a href="Projects.html">Projects</a>
+            <!--Use CSS to set logo size later-->
+            <img src="Logos\NWH_Logo_4.png" alt="NWH Logo" width="100" height="100" />
+            <a href="Resume.html">Resume</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+            <small>&copy; 2024 NWH Enterprises. All rights reserved. Made using HTML/CSS/JavaScript. No WordPress.</small>
+    </footer>
+
+    <!--Reference to .js file-->
+    <script src="contactFormScript.js"></script>
+
+</body>
+</html>
