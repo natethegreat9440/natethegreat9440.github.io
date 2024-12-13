@@ -120,34 +120,36 @@ article {
         text-align: center; /* Centers the text horizontally */
     }
 
+.tool-list {
+    display: flex; /* Enable flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.discipline-header, .sub-discipline-header {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Aligns items vertically */
+    gap: 1px; /* Adds space between the <h4> and the button */
+}
+
+    .sub-discipline-header h4 {
+        margin: 0; /* Removes extra margin that might affect alignment */
+    }
+    .discipline-header h3 {
+        margin: 0; /* Removes extra margin that might affect alignment */
+    }
+
+    .discipline-header, .sub-discipline-header button {
+        flex-shrink: 0; /* Prevents the button from shrinking */
+    }
+
+.tool-links {
+    display: none;
+}
+
 .project-list {
     display: block;
 }
 
-/*.project-bio img {
-    background-color: #ffcc33; /* Golden yellow 
-    display: block;
-}
-.project-bio h2 {
-    margin: 0;
-    text-align: center; /* Centers the text horizontally 
-    display: inline-flex; /*inline-flex
-}
-
-.project-bio p {
-    margin-top: 0; /* Ensures text starts directly below the header 
-    line-height: 1.5; /* Improves readability 
-    flex-wrap: wrap;
-}
-
-.bio-preview {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-.bio-details {
-    display: none;
-}
-*/
 .bio-preview {
     display: flex; /* Enable flexbox for layout */
     align-items: flex-start; /* Align items at the top */
