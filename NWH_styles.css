@@ -16,7 +16,8 @@ html, body {
 header {
     width: 100%; /* Makes sure the header takes up the full width */
     box-sizing: border-box; /* Ensures padding is included in the width */
-    background-color: #ffcc33; /* Golden yellow */
+    /*background-color: #ffcc33;  Golden yellow */
+    background-color: #c5e384; /* Light green */
     text-align: center;
     padding: 10px;
     font-family: Arial, 'Arial Narrow', sans-serif;
@@ -34,8 +35,11 @@ header {
         text-decoration: none; /* Removes underline from links */
         margin: 10px; /* Adds space around the links */
         font-size: 3em;
-        color: #4cbb17;
-        border: 5px solid #4cbb17;
+        /*color: #4cbb17; */
+        /* border: 5px solid #4cbb17; */
+        color: #000000;
+        background-color: #ffcc33;
+        border: 5px solid #4c9141; /* Fern green border */
         border-radius: 15px; /* Rounded corners */
         padding: 10px;
         align-self: center; /* Centers the links vertically */
@@ -55,8 +59,8 @@ header {
     }
 
 .page-banner {
-    background-color: #c5e384;
-    width: 98%; 
+    background-color: #c5e384; /* Light green */
+    width: 98%;
     border: 5px solid #4c9141; /* Fern green border */
     border-radius: 10px; /* Optional: Adds rounded corners */
     margin: 8px auto; /* Adds space around the banner */
@@ -85,7 +89,7 @@ header {
 }
 
 main {
-    display: flex;
+    display: flex; /*flex*/
     /*width: 100%; This seems to cause issues*/
     align-items: flex-start; /* Ensures the image and article align at the top */
     /*margin: 8px;/* Adds space around the main content */
@@ -101,6 +105,8 @@ main {
         border-radius: 15px; /* Rounded corners */
     }
 
+
+
 article {
     flex-grow: 1; /* Allows the article to take up remaining space */
     background-color: #c5e384;
@@ -113,6 +119,69 @@ article {
     article h2 {
         text-align: center; /* Centers the text horizontally */
     }
+
+.project-list {
+    display: block;
+}
+
+/*.project-bio img {
+    background-color: #ffcc33; /* Golden yellow 
+    display: block;
+}
+.project-bio h2 {
+    margin: 0;
+    text-align: center; /* Centers the text horizontally 
+    display: inline-flex; /*inline-flex
+}
+
+.project-bio p {
+    margin-top: 0; /* Ensures text starts directly below the header 
+    line-height: 1.5; /* Improves readability 
+    flex-wrap: wrap;
+}
+
+.bio-preview {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.bio-details {
+    display: none;
+}
+*/
+.bio-preview {
+    display: flex; /* Enable flexbox for layout */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2px; /* Add spacing between the image and text */
+    margin-bottom: 0px !important;
+}
+
+    .bio-preview img {
+        flex-shrink: 0; /* Prevent the image from shrinking */
+        max-width: 100px; /* Maintain the image size */
+        height: auto; /* Maintain aspect ratio */
+        background-color: #ffcc33; /* Golden yellow */
+    }
+
+    .bio-preview h2,
+    .bio-preview p {
+        margin: 0; /* Remove default margins for consistent spacing */
+    }
+
+    .bio-preview h2 {
+        margin-bottom: 10px; /* Add space below the title */
+        text-align: left;
+    }
+
+    .bio-preview p {
+        flex-grow: 1; /* Allow text to take the remaining space */
+    }
+    .detail-toggle {
+        margin-top: 0; /* Add space above the toggle */
+    }
+
+.bio-details {
+    display: none;
+}
 
 footer {
     width: 100%; /* Makes sure the header takes up the full width */
