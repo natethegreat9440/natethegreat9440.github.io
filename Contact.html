@@ -29,43 +29,41 @@
     </section>
 
     <main>
-        <form id="selectionForm">
+        <form id="selectionForm" name="selectionForm">
             <select id="formSelector" onchange="showForm()">
                 <option value="">Select a Contact Form</option>
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Employment Inquiry">Employment Inquiry</option>
-                <option value="Collaboration Inquiry">Collaboration Inquiry</option>
-                <option value="Website Feedback">Website Feedback</option>
-                <option value="Project Feedback">Project Feedback</option>
+                <option value="general-inquiry">General Inquiry</option>
+                <option value="employment-inquiry">Employment Inquiry</option>
+                <option value="collab-inquiry">Collaboration Inquiry</option>
+                <option value="site-feedback">Website Feedback</option>
+                <option value="project-feedback">Project Feedback</option>
             </select>
         </form>
 
         <!-- Divs for each form, initially hidden -->
-        <div id="General Inquiry" style="display:none">
+        <div id="general-inquiry" style="display:none">
             <!--Add action and method for form once I have a database server for storing submissions-->
-            <form>
+            <form name="general-inquiry">
                 <div>
-                    <label for="name">Your Name:</label>
+                    <label for="general_name">Your Name:</label>
                     <input type="text" id="general_name" name="name" required>
-                    <label for="email">Email:</label>
+                    <label for="general_email">Email:</label>
                     <input type="email" id="general_email" name="email" required>
                 </div>
                 <div>
-                    <label for="general_message">Message:</label>
-                    <textarea id="general_message" name="general_message" placeholder="Enter your message here..." required></textarea>
-                    <input type="submit" value="Submit General Inquiry">
+                    <label for="message">Message:</label>
+                    <textarea id="general_message" name="message" placeholder="Enter your message here..." required></textarea>
+                    <input type="submit" value="Submit General Inquiry" name="submit-inquiry">
                 </div>
-
             </form>
         </div>
 
-        <div id="Employment Inquiry" style="display:none">
-            <!--Add action and method for form once I have a database server for storing submissions-->
-            <form>
+        <div id="employment-inquiry" style="display:none">
+            <form name="employment-inquiry">
                 <div>
-                    <label for="name">Your Name:</label>
+                    <label for="employment_name">Your Name:</label>
                     <input type="text" id="employment_name" name="name" required>
-                    <label for="email">Email:</label>
+                    <label for="employment_email">Email:</label>
                     <input type="email" id="employment_email" name="email" required>
                 </div>
                 <div>
@@ -82,17 +80,17 @@
             </form>
         </div>
 
-        <div id="Collaboration Inquiry" style="display:none">
+        <div id="collab-inquiry" style="display:none">
             <!--Add action and method for form once I have a database server for storing submissions-->
-            <form>
+            <form name="collab-inquiry">
                 <div>
-                    <label for="name">Your Name:</label>
+                    <label for="collab_name">Your Name:</label>
                     <input type="text" id="collab_name" name="name" required>
-                    <label for="email">Email:</label>
+                    <label for="collab_email">Email:</label>
                     <input type="email" id="collab_email" name="email" required>
                 </div>
                 <div>
-                    <label>Who's Project?</label>
+                    <!--  Since I can only have so many templates on Email.js I am disabling this feature sinc eit won't log anywhere anyway'<label>Who's Project?</label>
                     <label for="myProject">
                         <input type="radio" id="myProject" name="projectChoice" value="myProject" required>
                         My Project
@@ -100,9 +98,9 @@
                     <label for="yourProject">
                         <input type="radio" id="yourProject" name="projectChoice" value="yourProject">
                         Your Project
-                    </label>
-                    <label for="projectName">Project Name:</label>
-                    <input type="text" id="projectName" name="projectName" required>
+                    </label>-->
+                    <label for="oppurtunity">Project Name:</label>
+                    <input type="text" id="projectName" name="oppurtunity" required>
                 </div>
                 <div>
                     <label for="collab_message">Message:</label>
@@ -112,16 +110,16 @@
             </form>
         </div>
 
-        <div id="Website Feedback" style="display:none">
+        <div id="site-feedback" style="display:none">
             <!--Add action and method for form once I have a database server for storing submissions-->
-            <form>
+            <form name="site-feedback">
                 <div>
-                    <label for="name">Your Name (optional):</label>
-                    <input type="text" id="web_name" name="name" required>
-                    <label for="email">Email (optional):</label>
-                    <input type="email" id="web_email" name="email" required>
+                    <label for="web_name">Your Name (optional):</label>
+                    <input type="text" id="web_name" name="name">
+                    <label for="web_email">Email (optional):</label>
+                    <input type="email" id="web_email" name="email">
                 </div>
-                <div>
+                <!--<div>
                     <select id="feedbackSelector" required>
                         <option value="">Select a Feedback Area</option>
                         <option value="General">General Feedback</option>
@@ -131,25 +129,25 @@
                         <option value="Tools">Tools for Engineers Page</option>
                         <option value="Contact">Contact Page</option>
                     </select>
-                </div>
+                </div>-->
                 <div>
-                    <label for="feedback">Feedback:</label>
-                    <textarea id="web_feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+                    <label for="message">Feedback:</label>
+                    <textarea id="web_feedback" name="message" placeholder="Enter your feedback here..." required></textarea>
                     <input type="submit" value="Submit Website Feedback">
                 </div>
             </form>
         </div>
 
-        <div id="Project Feedback" style="display:none">
+        <div id="project-feedback" style="display:none">
             <!--Add action and method for form once I have a database server for storing submissions-->
-            <form>
+            <form name="project-feedback">
                 <div>
-                    <label for="name">Your Name (optional):</label>
+                    <label for="project_name">Your Name (optional):</label>
                     <input type="text" id="project_name" name="name">
-                    <label for="email">Email (optional):</label>
+                    <label for="project_email">Email (optional):</label>
                     <input type="email" id="project_email" name="email">
                 </div>
-                <div>
+                <!--<div>
                     <select id="projectSelector" required>
                         <option value="">Select a Project</option>
                         <option value="AudioFile">AudioFile</option>
@@ -158,10 +156,10 @@
                         <option value="Gym">Gym Workout App (tentative title)</option>
                         <option value="MTG">MTG Deck Builder (tentative title)</option>
                     </select>
-                </div>
+                </div>-->
                 <div>
-                    <label for="feedback">Feedback:</label>
-                    <textarea id="project_feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+                    <label for="message">Feedback:</label>
+                    <textarea id="project_feedback" name="message" placeholder="Enter your feedback here..." required></textarea>
                     <input type="submit" value="Submit Project Feedback">
                 </div>
             </form>
@@ -177,11 +175,26 @@
             <a href="Resume.html">Resume</a>
             <a href="Contact.html">Contact</a>
         </div>
-            <small>&copy; 2024 NWH Enterprises. All rights reserved. Made using HTML/CSS/JavaScript. No WordPress.</small>
+        <small>&copy; 2024 NWH Enterprises. All rights reserved. Made using HTML/CSS/JavaScript. No WordPress.</small>
     </footer>
 
     <!--Reference to .js file-->
     <script src="ContactJavaScript.js"></script>
+    <!--Using Email.js
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("b7i3vqXUE4HJoWvlA"); // Replace with your EmailJS public key
+    </script>-->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "b7i3vqXUE4HJoWvlA",
+            });
+        })();
+    </script>
 
 </body>
 </html>

@@ -24,13 +24,23 @@ function ToggleDiscipline(button) {
     if (toggleDiscipline) {
         // Find all .sub-discipline buttons within the same .tool-discipline
         const allToggleButtons = toggleDiscipline.querySelectorAll('.detail-toggle');
+        // Update the button text only
+        const isCollapsed = button.textContent === 'Expand all';
+        button.textContent = isCollapsed ? 'Collapse all' : 'Expand all';
+
         if (allToggleButtons) {
             allToggleButtons.forEach(button => {
-                button.click();
+                if (isCollapsed) {
+                    if (button.textContent === '>') {
+                        ToggleSubDiscipline(button);
+                    }
+                }
+                else {
+                    if (button.textContent === 'v') {
+                        ToggleSubDiscipline(button);
+                    }
+                }
             });
-            // Update the button text only
-            const isCollapsed = button.textContent === 'Expand all';
-            button.textContent = isCollapsed ? 'Collapse all' : 'Expand all';
         }
     }
 }
@@ -50,5 +60,4 @@ function ToggleSubDiscipline(button) {
             button.textContent = isHidden ? 'v' : '>';
         }
     }
-
 }
