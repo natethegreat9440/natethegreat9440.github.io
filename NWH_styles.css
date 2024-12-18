@@ -12,7 +12,9 @@ html, body {
         margin: 8px;
         /*display: flex; /* Enables flexbox */
     }
-
+.page-banner {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+}
 header {
     width: 100%; /* Makes sure the header takes up the full width */
     box-sizing: border-box; /* Ensures padding is included in the width */
@@ -27,6 +29,7 @@ header {
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
     flex-direction: row;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
 }
     header a {
         display: inline-block;
@@ -38,12 +41,13 @@ header {
         /*color: #4cbb17; */
         /* border: 5px solid #4cbb17; */
         color: #000000;
-        background-color: #ffcc33;
+        background-color: #ffcc33; /*Goldenrod yellow */
         border: 5px solid #4c9141; /* Fern green border */
         border-radius: 15px; /* Rounded corners */
         padding: 10px;
         align-self: center; /* Centers the links vertically */
         /*padding: 5px 7px 5px 7px; /* Adds space inside the border */
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
     }
 
     header nav {
@@ -59,7 +63,7 @@ header {
     }
 
 .page-banner {
-    background-color: #c5e384; /* Light green */
+    background-color: #ffcc33; /* Main Goldenrodyellow Alt: #c5e384 Light green */
     width: 98%;
     border: 5px solid #4c9141; /* Fern green border */
     border-radius: 10px; /* Optional: Adds rounded corners */
@@ -114,6 +118,11 @@ article {
     border: 5px solid #4c9141; /* Fern green border */
     border-radius: 15px; /* Rounded corners */
     padding: 10px; /* Optional: Adds some padding inside the article */
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 1);
+}
+
+.main-pic img {
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 1);
 }
 
     article h2 {
@@ -136,7 +145,13 @@ article {
     }
     .discipline-header h3 {
         margin: 0; /* Removes extra margin that might affect alignment */
+        text-decoration: underline;
+        text-underline-offset: 5px;
     }
+
+.tool-links p {
+    text-underline-offset: 4px;
+}
 
     .discipline-header, .sub-discipline-header button {
         flex-shrink: 0; /* Prevents the button from shrinking */
@@ -147,8 +162,12 @@ article {
 }
 
 .project-list {
-    display: block;
+    display: block; 
 }
+
+    .project-list article {
+        margin: 16px !important;
+    }
 
 .bio-preview {
     display: flex; /* Enable flexbox for layout */
@@ -198,7 +217,8 @@ footer {
     display: flex; /* Enables flexbox */
     justify-content: space-between; /* Space between center content and small text */
     align-items: center; /* Centers the content vertically */
-    position: relative;
+    position: relative; /*relative */
+    bottom: 0;
     /*flex-direction: row;*/
 }
     footer a {
@@ -226,4 +246,20 @@ footer {
         right: 10px;
         color: black;
         margin: 0;
+    }
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+}
+
+    .contact-wrapper main{
+        flex: 1;
+    }
+
+    textarea {
+        width: 100%;
+        height: 200px;
+        max-width: 500px;
     }
