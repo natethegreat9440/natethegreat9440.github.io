@@ -6,6 +6,7 @@ html, body {
     width: 100%;
     font-size: 100%; /* Defaults to browser setting, typically 16px */
     /*overflow-x: hidden; /* Prevents horizontal scroll bar */
+
 }
 
     body :not(header):not(footer):not(.page-banner):not(.page-banner-disclaimer):not(a):not(.main-pic) {
@@ -144,13 +145,48 @@ main {
     align-items: flex-start; /* Ensures the image and article align at the top */
     /*margin: 8px;/* Adds space around the main content */
     flex-wrap: wrap;
+    justify-content: center;
 }
+
+article {
+    flex-grow: 1; /*Allows the article to take up remaining space */
+    background-color: #c5e384;
+    font-family: Arial, 'Arial Narrow', sans-serif;
+    border: 5px solid #4c9141; /* Fern green border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Optional: Adds some padding inside the article */
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 1);
+    /*font-size: 1rem;*/
+}
+
+button {
+    background-color: #ffcc33; /* Golden yellow */
+    border: 5px solid #4c9141; /* Fern green border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Adds space inside the button */
+    font-family: Arial, 'Arial Narrow', sans-serif;
+    font-size: 1rem; /* Adjust the font size */
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 1);
+}
+    button:hover, nav a:hover {
+        background-color: #4c9141; /* Fern green */
+        color: #ffcc33; /* Golden yellow */
+    }
+    button:active {
+        background-color: #4c9141; /* Fern green */
+        color: #ffcc33; /* Golden yellow */
+    }
+    button:focus {
+        outline: none; /* Removes the default focus outline */
+    }
+
 .bio-content {
     display: flex; /* Enables flexbox layout */
     flex-wrap: wrap; /* Allows items to wrap to the next line */
     /*flex-grow: 1;*/
     justify-content: flex-start; /* Adjust this as needed (e.g., space-between, space-around) */
     align-content: flex-start; /* Keeps items grouped closely together */
+    font-size: 1rem;
 }
     .main-pic {
         margin-right: 1rem; /* Adds some space between the image and the article 20px */
@@ -174,25 +210,6 @@ main {
         max-width: 1200px; /* Prevents items from growing too large */
     }
 
-
-
-article {
-    flex-grow: 1; /*Allows the article to take up remaining space */
-    background-color: #c5e384;
-    font-family: Arial, 'Arial Narrow', sans-serif;
-    border: 5px solid #4c9141; /* Fern green border */
-    border-radius: 15px; /* Rounded corners */
-    padding: 10px; /* Optional: Adds some padding inside the article */
-    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 1);
-    font-size: 1rem;
-}
-
-/* Styles for mobile devices */
-@media (max-width: 767px) {
-    article {
-        font-size: 1rem;
-    }
-}
 
 .video-container {
     position: relative;
@@ -285,9 +302,12 @@ article {
     .bio-preview p {
         flex-grow: 1; /* Allow text to take the remaining space */
     }
-    .detail-toggle {
-        margin-top: 0; /* Add space above the toggle */
-    }
+
+.project-list .detail-toggle {
+    margin-top: 0; /* Add space above the toggle */
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    font-size: 1.2rem; /* Adjust the font size */
+}
 
 .bio-details {
     display: none;
@@ -295,54 +315,111 @@ article {
 
 .resume {
     display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Allow the container to take full width */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center the resume container */
+    padding: 1rem; /* Add some spacing */
+    box-sizing: border-box; /* Include padding in dimensions */
 }
-.resume object{
+
+    .resume object {
+        width: 100%; /* Allow the object to scale with the container */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+        height: 100%; /* Take full height */
+        max-height: 1200px; /* Limit the height */
+        min-height: 800px; /* Set a minimum height */
+        justify-content: center; /* Center the content */
+        align-items: center; /* Center vertically */
+    }
+
+footer {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Space out the logo and content */
+    align-items: center; /* Vertically align items */
+    padding: 1rem; /* Add padding around the footer */
+    background-color: #ffcc33; /* Golden yellow */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row; /* Stack links vertically */
+    align-items: stretch; /* Align links to the left */
+    flex-grow: 1; /* Let the links take up available space */
+    gap: 5rem; /* Add spacing between links */
     justify-content: center;
 }
 
-footer {
-    width: 100%; /* Makes sure the header takes up the full width */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-    background-color: #ffcc33; /* Golden yellow */
-    text-align: center;
-    padding: 10px;
-    font-family: Arial, 'Arial Narrow', sans-serif;
-    color: #4cbb17;
-    border-top: 5px solid #4c9141; /* Fern green border */
-    margin: 0.5rem 0 0 0; /* Adds space above the footer */
-    display: flex; /* Enables flexbox */
-    justify-content: space-between; /* Space between center content and small text */
-    align-items: center; /* Centers the content vertically */
-    position: relative; /*relative */
-    bottom: 0;
-    /*flex-direction: row;*/
+.footer-logo {
+    margin-left: auto; /* Push logo to the right */
+    align-self: center; /* Center-align the logo vertically */
 }
-    footer :not(.footer-logo) > a {
-        display: inline-block;
-        margin: 0; /* Remove extra space around the links */
-        padding: 0; /* Adjust padding for link size, if needed */
-        margin: 10px; /* Adds space around the links */
-        font-size: 1em;
-        color: #4cbb17;
-        padding: 10px;
-        text-underline-offset: 5px;
-        /*padding: 5px 7px 5px 7px; /* Adds space inside the border */
-    }
-    .footer-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%; /* Adjust the width of the content to avoid stretching */
-        flex-wrap: wrap; /* Allows content to wrap to the next line */
+
+footer :not(.footer-logo) > a {
+    color: #4cbb17;
+    text-underline-offset: 0.3em;
+}
+
+.copyright-text {
+    width: 100%; /* Make sure the text spans the footer */
+    margin-top: 1rem; /* Add space above the small text */
+    text-align: center; /* Center-align the small text */
+    font-size: 0.8rem;
+    color: black;
+}
+
+/*Mobile device styles excluding tablets*/
+@media (max-width: 767px) {
+
+    footer {
+        display: flex; /* Enable flexbox for the footer */
+        flex-direction: row; /* Align items in a row */
+        justify-content: space-between; /* Space links and logo */
+        align-items: center; /* Align items vertically */
+        padding: 0.1em;
+        gap: 0.1em; /* Add spacing between content */
     }
 
-    footer small {
-        position: absolute;
-        bottom: 2px;
-        right: 10px;
-        color: black;
-        margin: 0;
+    .footer-content {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Align links to the left */
+        flex-grow: 1; /* Allow links section to grow */
+        gap: 0.1rem; /* Add spacing between links */
     }
+
+    .footer-logo {
+        align-self: flex-start; /* Align the logo on the right */
+        margin-left: auto; /* Push the logo to the far right */
+    }
+
+    .copyright-text {
+        text-align: center; /* Keep the copyright centered */
+        width: 100%; /* Span across the footer */
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: black;
+    }
+
+    footer :not(.footer-logo) > a {
+        margin: 0.3em;
+        text-underline-offset: 0.3em;
+    }
+
+    footer img {
+        max-width: 80px; /* Ensure the logo scales on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .resume object {
+    min-height: 400px; /* Set a minimum height */
+    }
+
+}
 
 .contact-wrapper {
     display: flex;
