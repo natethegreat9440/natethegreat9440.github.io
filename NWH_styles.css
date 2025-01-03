@@ -4,6 +4,7 @@ html, body {
     margin: 0; /* Removes default margin */
     margin-right: 0; /* Removes default margin */
     width: 100%;
+    font-size: 100%; /* Defaults to browser setting, typically 16px */
     /*overflow-x: hidden; /* Prevents horizontal scroll bar */
 }
 
@@ -61,6 +62,49 @@ header {
         margin: 0 auto; /* Centers the image horizontally within its container */
     }
 
+/* Note that this specific mobile media styling only applies to html pages with the 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> specified. 
+    This tag is intentionally left off pages that look good as is,
+    where the spsecific styling causes issues rather than alleviation */
+
+@media (max-width: 767px) {
+    header {
+        display: flex; /* Enable flexbox for layout adjustment */
+        flex-direction: row; /* Arrange items side by side */
+        align-items: center; /* Align items vertically */
+        justify-content: center; /* Center the header content */
+        gap: 1rem; /* Add spacing between links and logo */
+        padding: 1rem;
+    }
+
+        header :not(.header-logo) > a {
+            display: inline-block;
+            font-size: 1.2rem; /* Adjust font size for smaller screens */
+            padding: 0.5rem 1rem; /* Reduce padding for compact buttons */
+            margin: 0; /* Remove extra space around links */
+            text-decoration: none;
+            color: #000000;
+            background-color: #ffcc33; /* Goldenrod yellow */
+            border: 5px solid #4c9141; /* Fern green border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+        }
+
+        header nav {
+            display: flex; /* Ensure nav items remain in a column */
+            flex-direction: column; /* Stack links vertically */
+            gap: 1rem; /* Add spacing between the links */
+            align-items: flex-start; /* Align links next to the logo */
+        }
+
+        header img {
+            max-width: 100px; /* Set a smaller width for the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+}
+
+
+
 .page-banner {
     background-color: #ffcc33; /* Main Goldenrodyellow Alt: #c5e384 Light green */
     width: 98%;
@@ -73,6 +117,7 @@ header {
     text-align: center; /* Optional: Centers the text */
     font-family: Tahoma, Verdana, sans-serif;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    font-size: 1.2em; 
 }
 
 .page-banner-disclaimer {
@@ -90,6 +135,7 @@ header {
     font-size: 0.7em;
     font-weight: normal;
     font-style: italic;
+
 }
 
 main {
@@ -131,13 +177,21 @@ main {
 
 
 article {
-    flex-grow: 1;  /*Allows the article to take up remaining space */
+    flex-grow: 1; /*Allows the article to take up remaining space */
     background-color: #c5e384;
     font-family: Arial, 'Arial Narrow', sans-serif;
     border: 5px solid #4c9141; /* Fern green border */
     border-radius: 15px; /* Rounded corners */
     padding: 10px; /* Optional: Adds some padding inside the article */
     box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 1);
+    font-size: 1rem;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    article {
+        font-size: 1rem;
+    }
 }
 
 .video-container {
