@@ -44,7 +44,7 @@
                     </section>
                     <section class="bio-details">
                         <p>
-                            <h3>Download the latest version of AudioFile <a href="InstallerPackage_v1.1.zip" download>here</a>!</h3>
+                            <h3>Download the latest version of AudioFile <a href="InstallerPackage_v1.2.zip" download>here</a>!</h3>
                         </p>
                         <h3>Instructions:</h3>
                         <ol>
@@ -56,6 +56,45 @@
                         <h3>See source code/project on Github <a href="https://github.com/natethegreat9440/AudioFile">here</a></h3>
                         <br>
                         <div class="dev-log-heading"><h3>Dev Log</h3></div>
+                        <br>
+                        <h4>v.1.2</h4>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/isfCQf0uNZo?si=zkc3cayJC-mzsy16" title="AudioFile Version 1.2-Genius Sample and Missing Track Tags Handling Feature Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        <br>
+                        <h4>Version Notes</h4>
+                        <ul>
+                            <li>
+                                Fifth release
+                            </li>
+                            <li>
+                                Genius song samples and sampled by track info now added to display
+                                <ul>
+                                    <li>
+                                        Uses Genius's API to retrieve this information where it exists for any given track once selected
+                                        <ul>
+                                            <li>Similar process of utilizing Render.com proxy web service for making calls to Genius's API</li>
+                                        </ul>
+                                    </li>
+                                    <li>Sample info text boxes update based on searching status. I.e., Searching, Found, Not Found similar to the Genius Button</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Missing MP3 file tags now handled on load
+                                <ul>
+                                    <li>By default AudioFile uses the file name tags for a given uploaded MP3 file to set the Track Name, Artist, and Album fields</li>
+                                    <li>If tags are not found AudioFile will attempt to use Genius's API to search for Track Name, Artist, and Album fields based on file name as a search query</li>
+                                    <li>For best results it is recommended to have the file name in the format of "Track Number (##) - Track Name - Artist" or "Track Name - Artist"
+                                        <ul>
+                                            <li>Within this format it is fine to swap the positions of any of these fields in any order (i.e., "Artist - Track Name") as long as dashes are used as delimiters</li>
+                                            <li>
+                                                Failure to use a delimiter will produce low quality results. Often the algorithm will find something for any given file name, but it may be something completely unexpected
+                                                 <ul>
+                                                      <li>If the algorithm finds nothing the fallback for loading the file will be to set the Track Name to the file name and set the artist and album to Unknown</li>
+                                                 </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                         <br>
                         <h4>v.1.1</h4>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/3Rrg7R6hKr8?si=PSNJ5ND7NDTXfmAQ" title="AudioFile Version 1.1-Genius Button Feature Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -85,10 +124,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>Aside: Wanted to do something bigger than just this initially regarding fetching sample info from whosampled.com, however whosampled.com's TOS and lack of API access limited what I could do.</li>
-                            <ul>
-                                <li>If whosampled.com allows more access to metadata in the future then who knows - maybe I'll pivot back and axe this feature. Until then the Genius button stays.</li>
-                            </ul>
                         </ul>
                         <br>
                         <h4>v.1.0</h4>
