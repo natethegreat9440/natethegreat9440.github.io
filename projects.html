@@ -81,14 +81,15 @@
                                 <ul>
                                     <li>By default AudioFile uses the file name tags for a given uploaded MP3 file to set the Track Name, Artist, and Album fields</li>
                                     <li>If tags are not found AudioFile will attempt to use Genius's API to search for Track Name, Artist, and Album fields based on file name as a search query</li>
-                                    <li>For best results it is recommended to have the file name in the format of "Track Number (##) - Track Name - Artist" or "Track Name - Artist"
+                                    <li>
+                                        For best results it is recommended to have the file name in the format of "Track Number (##) - Track Name - Artist" or "Track Name - Artist"
                                         <ul>
                                             <li>Within this format it is fine to swap the positions of any of these fields in any order (i.e., "Artist - Track Name") as long as dashes are used as delimiters</li>
                                             <li>
                                                 Failure to use a delimiter will produce low quality results. Often the algorithm will find something for any given file name, but it may be something completely unexpected
-                                                 <ul>
-                                                      <li>If the algorithm finds nothing the fallback for loading the file will be to set the Track Name to the file name and set the artist and album to Unknown</li>
-                                                 </ul>
+                                                <ul>
+                                                    <li>If the algorithm finds nothing the fallback for loading the file will be to set the Track Name to the file name and set the artist and album to Unknown</li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
@@ -223,6 +224,83 @@
             <article>
                 <section class="project-bio">
                     <section class="bio-preview">
+                        <img src="Logos\DSP_Logo.png" alt="NWH Icon Logo" width="100" height="100" />
+                        <div>
+                            <h2>Duct Static Calc Pro</h2>
+                            <p>
+                                Duct static pressure calculation is an essential yet nebulous task at times for most HVAC mechanical design engineers in new construction which determines
+                                selection of fans, air handlers, and other expensive pieces of mechanical equipment that unfortunately can become "no going back now" items too early along in in the broader multi-discpline construction engineering
+                                architectural design process. Most engineers use a combination of outdated ASHRAE software for static pressure calculation of specific fittings and
+                                Excel for aggregation of fittings (AKA minor losses), straight lengths (AKA major losses), and rules of thumb for 'system effect' (this is where the black magic comes in). Duct Static Calc Pro
+                                helps streamline the calculation process by combining these activities into a singular program with a modern user-friendly interface making things simpler
+                                for HVAC/mechanical design engineers and consequently the multi-disciplinary design team effort.
+                            </p>
+                            <button class="detail-toggle">Expand details</button>
+                        </div>
+                    </section>
+                    <section class="bio-details">
+                        <p>
+                            <h3>Download the latest version of Duct Static Calc Pro <a href="DuctStaticCalcPro-v0.1.exe" download>here</a>!</h3>
+                        </p>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Run DuctStaticCalcPro-v0.1.exe (try running with admin privileges if program does not launch)</li>
+                            <li>That's it!</li>
+                        </ol>
+                        <br>
+                        <div class="dev-log-heading"><h3>Dev Log</h3></div>
+                        <br>
+                        <h4>v.0.1</h4>
+                        <img src="Dev Log Pics\Duct Static Calc Pro\Sample_Screenshot_v0.1.png" alt="Duct Static Calc Pro v.0.1 window screenshot" width="560" height="560" />
+                        <br>
+                        <h4>Version Notes</h4>
+                        <ul>
+                            <li>
+                                First release
+                            </li>
+                            <li>
+                                Calculates major loss for straight sections of ductwork
+                                <ul>
+                                    <li>US vs. SI unit options</li>
+                                    <li>Round vs. rectangular duct options</li>
+                                    <li>Smooth vs. flex duct options for round</li>
+                                    <li>Calculations use the Haaland Equation (for friction factor) as an approximation for the Colebrook-White equation</li>
+                                    <ul>
+                                        <li>Results may differ slightly between other calculators that use the Colebrook-White equation, the Swamee-Jain equation, or ASHRAE lookup tables for friction factor</li>
+                                    </ul>
+                                    <li>Calculations use air at Standard Temperature and Pressure (STP - 68F/20C air temp)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Tabulates and aggregates itemized calculated losses
+                                <ul>
+                                    <li>"Add to Table" button adds a given calc to the table</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br>
+                        <h4>Features under development</h4>
+                        <ul>
+                            <li>Minor loss calculations for common supply and return/exhaust fittings</li>
+                            <ul>
+                                <li>User will be able to select a fitting from a catalog and inputs for fitting-specific geometric parameters will appear</li>
+                            </ul>
+                            <li>System effects for fan inlet/outlet conditions</li>
+                            <li>System effects for "back to back" congested fittings</li>
+                            <li>Static pressure inputs for dampers, louvers, and dirty filters</li>
+                            <li>Adjustable air/fluid properties</li>
+                            <li>User feedback for high static fittings/sections</li>
+                            <li>Solver for geometric parameters for a target static pressure</li>
+                            <li>Calc table export/import to/from Excel</li>
+                        </ul>
+                    </section>
+                </section>
+            </article>
+
+
+            <article>
+                <section class="project-bio">
+                    <section class="bio-preview">
                         <img src="Logos\CBPSPro_Logo.png" alt="NWH Icon Logo" width="100" height="100" />
                         <div>
                             <h2>CBPS Pro</h2>
@@ -242,28 +320,6 @@
                 </section>
             </article>
 
-            <article>
-                <section class="project-bio">
-                    <section class="bio-preview">
-                        <img src="Logos\DSP_Logo.png" alt="NWH Icon Logo" width="100" height="100" />
-                        <div>
-                            <h2>Duct Static Calc Pro</h2>
-                            <p>
-                                Duct static pressure calculation is an essential yet nebulous task at times for most HVAC mechanical design engineers in new construction which determines
-                                selection of fans, air handlers, and other expensive pieces of mechanical equipment that unfortunately can become "no going back now" items too early along in in the broader multi-discpline construction engineering
-                                architectural design process. Most engineers use a combination of outdated ASHRAE software for static pressure calculation of specific fittings and
-                                Excel for aggregation of fittings (AKA minor losses), straight lengths (AKA major losses), and rules of thumb for 'system effect' (this is where the black magic comes in). Duct Static Calc Pro
-                                helps streamline the calculation process by combining these activities into a singular program with a modern user-friendly interface making things simpler
-                                for HVAC/mechanical design engineers and consequently the multi-disciplinary design team effort.
-                            </p>
-                            <button class="detail-toggle">Expand details</button>
-                        </div>
-                    </section>
-                    <section class="bio-details">
-                        <p>Prototype coming soon!</p>
-                    </section>
-                </section>
-            </article>
 
             <article>
                 <section class="project-bio">
@@ -319,25 +375,28 @@
                         <h3>Ghost In The Graveyard</h3>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/XPVcUvKTXfY?si=Tsw8BGwzIV3eFgbk" title="Ghost in the Graveyard Beta Launch Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <ul>
-                            <li>Check out this free indie top-down platform game now on <a href="https://kurokageproductions.itch.io/ghost-in-the-graveyard">itch.io</a>!!
-                            <ul>
-                                <li>(Donations are accepted)</li>
-                            </ul>
+                            <li>
+                                Check out this free indie top-down platform game now on <a href="https://kurokageproductions.itch.io/ghost-in-the-graveyard">itch.io</a>!!
+                                <ul>
+                                    <li>(Donations are accepted)</li>
+                                </ul>
                             </li>
-                            <li>In general my role on this was mainly level design, but I did so some light programming on the actuating gate feature!
+                            <li>
+                                In general my role on this was mainly level design, but I did so some light programming on the actuating gate feature!
                                 <ul>
                                     <li>Lead programmer credit goes to my friend Josh <a href="https://kuroware.com/">(see his portfolio here)</a></li>
                                 </ul>
                             </li>
-                            <li>Levels designed:
-                            <ul>
-                                <li>L3: "The Haunted Forest Level"</li>
-                                <li>L4: "The I Ain't Afraid Of No Guards Level"</li>
-                                <li>L6: "The Wild West 'Ghost' Town Level"</li>
-                                <li>L7: "The Teleporter Level"</li>
-                                <li>L9: "The Peace Sign Level"</li>
-                                <li>L10: "The Royal Graveyard Level"</li>
-                            </ul>
+                            <li>
+                                Levels designed:
+                                <ul>
+                                    <li>L3: "The Haunted Forest Level"</li>
+                                    <li>L4: "The I Ain't Afraid Of No Guards Level"</li>
+                                    <li>L6: "The Wild West 'Ghost' Town Level"</li>
+                                    <li>L7: "The Teleporter Level"</li>
+                                    <li>L9: "The Peace Sign Level"</li>
+                                    <li>L10: "The Royal Graveyard Level"</li>
+                                </ul>
                             </li>
                             <li>Did advise strongly on some core gameplay puzzle elements such as teleporters, actuating gates, bonus items, and hidden barriers used throughout</li>
                             <li>This project was my first exposure to Unity and was a great oppurtunity to cut my teeth and springboard my programming journey!</li>

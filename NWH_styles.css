@@ -277,6 +277,12 @@ button {
         margin: 16px !important;
     }
 
+        /*.project-list article img {
+            border-radius: 0px;*/ /* Removes rounded corners */
+        /*}*/
+
+        
+
 .bio-preview {
     display: flex; /* Enable flexbox for layout */
     align-items: flex-start; /* Align items at the top */
@@ -313,6 +319,10 @@ button {
 
 .bio-details {
     display: none;
+}
+
+.bio-details img {
+    padding: 5px;
 }
 
 .resume {
