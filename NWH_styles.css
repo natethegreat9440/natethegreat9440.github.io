@@ -188,6 +188,11 @@ button {
     align-content: flex-start; /* Keeps items grouped closely together */
     font-size: 1rem;
 }
+
+p.indented-block {
+  text-indent: 45px;
+}
+
     .main-pic {
         margin-right: 1rem; /* Adds some space between the image and the article 20px */
         /*margin-top: 4rem; */
@@ -214,7 +219,7 @@ button {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 25%;  56.25% 16:9 Aspect Ratio 
+    padding-bottom: 25%;  /*56.25% 16:9 Aspect Ratio */
     height: 0;
     max-height: 350px;
     flex-grow: 0;
