@@ -189,7 +189,7 @@ button {
     font-size: 1rem;
 }
 
-p.indented-block {
+.indented-block {
   text-indent: 45px;
 }
 
